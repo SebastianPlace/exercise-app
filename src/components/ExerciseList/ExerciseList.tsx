@@ -1,16 +1,7 @@
 import * as React from 'react';
 import './ExerciseList.css';
 import Exercise from '../../interfaces/exercise';
-
-const ExerciseCard = (exercise: Exercise) => {
-  return (
-    <li className="ExerciseCard" key={exercise.id}>
-      <h2>{exercise.name}</h2>
-    </li>
-  );
-};
-
-const exerciseElements = (exercises: [Exercise]) => exercises.map(ExerciseCard);
+import ExerciseCard from '../ExerciseCard/ExerciseCard';
 
 interface Props {
   exercises: [Exercise];
@@ -18,11 +9,12 @@ interface Props {
 
 class ExerciseList extends React.Component<Props> {
   render() {
+    const exercises = this.props.exercises;
+    const exerciseCards = exercises.map(ex => <ExerciseCard exercise={ex} key={ex.id} />);
+
     return (
-      <div className="ExerciseList">
-        <ul>
-          {exerciseElements(this.props.exercises)}
-        </ul>
+      <div className="Exercise-list">
+        {exerciseCards}
       </div>
     );
   }
