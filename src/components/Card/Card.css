@@ -2,5 +2,5 @@
   border-radius: 4px;
   padding: 24px;
   box-shadow: 0 2px 4px 0 rgb(182, 182, 182);
-  margin-bottom: 12px; /* should be global for vertical rhythm */
+  margin-bottom: 24px; /* should be global for vertical rhythm */
 }
