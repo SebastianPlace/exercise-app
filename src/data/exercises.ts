@@ -10,5 +10,10 @@ export default <[Exercise]> [
     id: '2',
     name: 'Pullup',
     muscle_groups: ['back', 'biceps']
+  },
+  {
+    id: '3',
+    name: 'Pistol Squat',
+    muscle_groups: ['quads', 'glutes']
   }
 ];

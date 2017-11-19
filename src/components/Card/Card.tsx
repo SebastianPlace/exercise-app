@@ -3,11 +3,13 @@ import './Card.css';
 
 interface Props {
   children: {};
+  className?: string;
 }
 
 export default (props: Props) => {
+  const cssClasses = `Card ${props.className}`;
   return (
-    <div className="Card">
+    <div className={cssClasses}>
       {props.children}
     </div>
   );

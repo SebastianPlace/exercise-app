@@ -1,0 +1,8 @@
+.Exercise-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Exercise-list .Exercise-card {
+  margin-right: 24px;
+}

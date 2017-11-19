@@ -17,5 +17,5 @@ it('renders without crashing', () => {
 it('renders the exercise name', () => {
   const div = document.createElement('div');
   ReactDOM.render(<ExerciseCard exercise={fakeExercise} key={fakeExercise.id} />, div);
-  expect(div.textContent).toBe('Test');
+  expect(div.getElementsByTagName('h2')[0].innerHTML).toBe('Test');
 });
