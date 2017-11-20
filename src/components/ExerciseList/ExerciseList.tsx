@@ -4,7 +4,7 @@ import Exercise from '../../interfaces/exercise';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
 
 interface Props {
-  exercises: [Exercise];
+  exercises: Exercise[];
 }
 
 class ExerciseList extends React.Component<Props> {
