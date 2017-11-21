@@ -9,7 +9,7 @@ import exercises from './data/exercises';
 interface Props {}
 interface State {
   filterText: string;
-  exercises: Exercise[];
+  exercises: Array<Exercise>;
 }
 
 class App extends React.Component<Props, State> {
@@ -20,7 +20,8 @@ class App extends React.Component<Props, State> {
   }
 
   filterResults(filterText: string) {
-    const filteredExercises: Exercise[] = this.state.exercises.filter(ex => ex.name.includes(filterText));
+    const filteredExercises: Array<Exercise> = exercises
+      .filter(ex => ex.name.toLowerCase().includes(filterText.toLowerCase()));
     this.setState({
       filterText,
       exercises: filteredExercises

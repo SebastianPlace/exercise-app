@@ -17,7 +17,7 @@ class ExerciseList extends React.Component<Props, State> {
 
   handleChange(e: InputEvent) {
     this.props.onChange(e.target.value);
-    // this.setState({ value: e.target.value });
+    this.setState({ value: e.target.value });
   }
 
   render() {
