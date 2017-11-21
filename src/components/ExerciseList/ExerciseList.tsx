@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './ExerciseList.css';
-import Exercise from '../../interfaces/exercise';
+import Exercise from '../../types/exercise';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
 
 interface Props {

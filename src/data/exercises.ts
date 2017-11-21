@@ -1,4 +1,4 @@
-import Exercise from '../interfaces/exercise';
+import Exercise from '../types/exercise';
 
 export default <[Exercise]> [
   {

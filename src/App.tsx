@@ -3,7 +3,7 @@ import './App.css';
 import ExerciseList from './components/ExerciseList/ExerciseList';
 import SearchBar from './components/SearchBar/SearchBar';
 
-import Exercise from './interfaces/exercise';
+import Exercise from './types/exercise';
 import exercises from './data/exercises';
 
 interface Props {}
