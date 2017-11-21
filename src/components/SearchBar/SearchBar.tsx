@@ -4,6 +4,7 @@ interface InputEvent {
   target: { 
     value: string;
   };
+  preventDefault: Function;
 }
 
 interface Props { 
@@ -15,15 +16,21 @@ class ExerciseList extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);    
   }
 
   handleChange(e: InputEvent) {
     this.props.onChange(e.target.value);
   }
 
+  // tslint:disable-next-line:no-any
+  handleSubmit(e: any) {
+    e.preventDefault();
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input type="text" value={this.props.value} onChange={this.handleChange}/>
       </form>
     );
