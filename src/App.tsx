@@ -32,7 +32,7 @@ class App extends React.Component<Props, State> {
     return (
       <div className="App">
         <h2>Exercises</h2>
-        <SearchBar onChange={this.filterResults} />
+        <SearchBar onChange={this.filterResults} value={this.state.filterText}/>
         <ExerciseList exercises={this.state.exercises} />
       </div>
     );
