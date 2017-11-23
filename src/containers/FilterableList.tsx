@@ -16,8 +16,8 @@ export function mapDispatchToProps(dispatch: Dispatch<FilterExercisesAction>, ow
   };
 }
 
-export function mergeProps(stateProps: Object, dispatchProps: Object, ownProps: Object) {
-  return Object.assign({}, ownProps, stateProps, dispatchProps);
+export function mergeProps(dispatchProps: Object, ownProps: Object) {
+  return Object.assign({}, ownProps, dispatchProps);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(FilterableList);
