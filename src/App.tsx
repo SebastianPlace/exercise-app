@@ -1,39 +1,15 @@
 import * as React from 'react';
 import './App.css';
-import ExerciseList from './components/ExerciseList/ExerciseList';
-import SearchBar from './components/SearchBar/SearchBar';
-
-import { Exercises } from './types';
-import exercises from './data/exercises';
+import FilterableList from './containers/FilterableList';
 
 interface Props {}
-interface State {
-  filterText: string;
-  exercises: Exercises;
-}
 
-class App extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.filterResults = this.filterResults.bind(this);
-    this.state = { filterText: '', exercises };
-  }
-
-  filterResults(filterText: string) {
-    const filteredExercises: Exercises = exercises
-      .filter(ex => ex.name.toLowerCase().includes(filterText.toLowerCase()));
-    this.setState({
-      filterText,
-      exercises: filteredExercises
-    });
-  }
-
+class App extends React.Component<Props> {
   render() {
     return (
       <div className="App">
         <h2>Exercises</h2>
-        <SearchBar onChange={this.filterResults} value={this.state.filterText}/>
-        <ExerciseList exercises={this.state.exercises} />
+        <FilterableList />
       </div>
     );
   }

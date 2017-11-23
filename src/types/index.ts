@@ -1,11 +1,12 @@
 export interface Exercise {
   id: string;
   name: string;
-  muscle_groups: Array<string>;
+  muscle_groups: string[];
 }
 
-export type Exercises = Array<Exercise>;
+export type Exercises = Exercise[];
 
 export interface StoreState {
   exercises: Exercises;
+  filterText: string;
 }

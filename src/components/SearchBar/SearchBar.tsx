@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+// TODO: create a better type for DOM events
 interface InputEvent {
   target: { 
     value: string;
