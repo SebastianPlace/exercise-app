@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Card from '../Card/Card';
 import Tag from '../Tag/Tag';
-import Exercise from '../../types/exercise';
+import { Exercise } from '../../types';
 
 interface Props {
   exercise: Exercise;

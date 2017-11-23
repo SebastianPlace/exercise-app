@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import ExerciseCard from './ExerciseCard';
-import Exercise from '../../types/exercise';
+import { Exercise } from '../../types';
 
 const fakeExercise: Exercise = {
   id: '1',

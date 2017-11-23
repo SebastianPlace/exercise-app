@@ -3,13 +3,13 @@ import './App.css';
 import ExerciseList from './components/ExerciseList/ExerciseList';
 import SearchBar from './components/SearchBar/SearchBar';
 
-import Exercise from './types/exercise';
+import { Exercises } from './types';
 import exercises from './data/exercises';
 
 interface Props {}
 interface State {
   filterText: string;
-  exercises: Array<Exercise>;
+  exercises: Exercises;
 }
 
 class App extends React.Component<Props, State> {
@@ -20,7 +20,7 @@ class App extends React.Component<Props, State> {
   }
 
   filterResults(filterText: string) {
-    const filteredExercises: Array<Exercise> = exercises
+    const filteredExercises: Exercises = exercises
       .filter(ex => ex.name.toLowerCase().includes(filterText.toLowerCase()));
     this.setState({
       filterText,

@@ -1,6 +1,4 @@
-import Exercise from '../types/exercise';
-
-export default <[Exercise]> [
+export default [
   {
     id: '1',
     name: 'Pushup',

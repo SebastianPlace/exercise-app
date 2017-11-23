@@ -1,10 +1,10 @@
 import * as React from 'react';
 import './ExerciseList.css';
-import Exercise from '../../types/exercise';
+import { Exercises } from '../../types';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
 
 interface Props {
-  exercises: Exercise[];
+  exercises: Exercises;
 }
 
 class ExerciseList extends React.Component<Props> {
